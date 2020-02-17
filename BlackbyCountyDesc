@@ -3,7 +3,6 @@ from district_svny d
 inner join person_svny p                         
 on d.DWID = p.DWID                               
 where p.race = 'black'                           
-and d.countyname is not null                     
-and p.                                           
+and d.countyname is not null                                                                
 group by d.countyname                            
 order by 'Total People' desc
