@@ -1,4 +1,4 @@
-select d.countyname as County, count(*) as 'Total
+select d.countyname as County, count(*) as 'Total'
 from district_svny d                             
 inner join person_svny p                         
 on d.DWID = p.DWID                               
