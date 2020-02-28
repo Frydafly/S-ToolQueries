@@ -5,5 +5,5 @@ on d.DWID = p.DWID
 where p.race = 'black'
 and d.countyname is not null
 and p.voterstatus in ('inactive','active')
-group by d.countyname                            
+group by d.countyname
 order by 'Total People' desc
