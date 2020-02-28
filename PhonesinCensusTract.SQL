@@ -1,9 +1,0 @@
-select p.resaddrcensustract, count(p.dwid) as people from person_svny p
-join phones_svny h
-on h.dwid = p.dwid
-left join district_svny d
-on d.dwid = p.dwid
-where p.resaddrcensustract = 100
-and d.countyname LIKE 'ORANGE'
-and (h.likely_cell_phone is not null OR h.likely_land_phone is not null)
-group by p.resaddrcensustract
