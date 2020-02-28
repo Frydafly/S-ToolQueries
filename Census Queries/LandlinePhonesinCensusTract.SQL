@@ -1,4 +1,4 @@
-select '407203' as tract, count(p.dwid) as cells from person_svny p
+select '407203' as tract, count(p.dwid) as landlines from person_svny p
 join phones_svny h
 on h.dwid = p.dwid
 left join district_svny d
@@ -9,7 +9,7 @@ and h.likely_land_phone is not null
 
 UNION
 
-select '406701' as tract, count(p.dwid) as cells from person_svny p
+select '406701' as tract, count(p.dwid) as landlines from person_svny p
 join phones_svny h
 on h.dwid = p.dwid
 left join district_svny d
@@ -20,7 +20,7 @@ and h.likely_land_phone is not null
 
 UNION
 
-select '406802' as tract, count(p.dwid) as cells from person_svny p
+select '406802' as tract, count(p.dwid) as landlines from person_svny p
 join phones_svny h
 on h.dwid = p.dwid
 left join district_svny d
