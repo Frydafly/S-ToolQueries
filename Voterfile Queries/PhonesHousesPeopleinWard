@@ -1,0 +1,10 @@
+select d.ward, count(case when h.likely_cell_phone is not null then p.dwid end) as cellphones, count(case when h.likely_land_phone is not null then p.dwid end) as landlines, count(p.householdid1) as doors
+from person_svny p
+join phones_svny h
+on h.dwid = p.dwid
+left join district_svny d
+on d.dwid = p.dwid
+and d.countyname LIKE 'DUTCHESS'
+and d.township LIKE 'TOWN POUGHKEEPSIE'
+group by d.ward
+order by d.ward
